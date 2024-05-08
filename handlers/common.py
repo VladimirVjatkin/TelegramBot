@@ -30,7 +30,7 @@ async def info(message: types.Message):
 @router.message(F.text.lower() == 'покажи лису')
 async def info(message: types.Message):
     img_fox = fox()
-    await message.answer('Привет, лови свою рыжую лису')
+    await message.answer('Привет, лови свою красавицу лису!!')
     await message.answer_photo(img_fox)
     # img_fox = fox()
     # await bot.send_photo(message.from_user.id, img_fox)
@@ -42,4 +42,16 @@ async def info(message: types.Message):
     await message.answer(f'С помощью API запрашиваем погоду на сервере openweathermap.org')
     await message.answer(f'И Вот вам погода в Праге в настоящий момен:')
     await message.answer(f"Температура: {weath[0]}С, Влажность: {weath[1]}%, Давление: {weath[2]}ГПа., Скорость ветра: {weath[3]}м/с")
+
+#@router.message(F.text.lower() == 'погода')
+#async def ask_for_city(message: types.Message):
+#        await message.answer("Пожалуйста, введите название города:")
+
+#@router.message()
+#async def get_weather(message: types.Message):
+#    city = message.text  # Получаем название города из сообщения пользователя
+#    weath = weather_all(city)
+#    await message.answer(f'С помощью API запрашиваем погоду на сервере openweathermap.org')
+#    await message.answer(f'И Вот вам погода в {city} в настоящий момент:')
+#    await message.answer(f"Температура: {weath[0]}С, Влажность: {weath[1]}%, Давление: {weath[2]}ГПа., Скорость ветра: {weath[3]}м/с")
 
